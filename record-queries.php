@@ -49,8 +49,10 @@ class Record {
 		<?php
 	}
 
-	public static function logQuery(string $query): void
+	public static function logQuery(string $query): string
 	{
 		self::$queries[] = $query;
+
+		return $query;
 	}
 }
